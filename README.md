@@ -10,7 +10,7 @@
 
 ```js
 
-var Router = require('backbone-router');
+var Router = require('spini-backbone-router');
 
 var Workspace = Router.extend({
 

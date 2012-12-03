@@ -6,7 +6,7 @@ var Events = require('backbone-events');
 
 // Routers map faux-URLs to actions, and fire events when routes are
 // matched. Creating a new one sets its `routes` hash, if not set statically.
-var Router = module.Export = function(options) {
+var Router = module.exports = function(options) {
   options || (options = {});
   if (options.routes) this.routes = options.routes;
   this._bindRoutes();
