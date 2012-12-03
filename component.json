@@ -7,7 +7,7 @@
   "dependencies": {
     "component/underscore": "*",
     "timoxley/backbone-events": "*",
-    "spini/backbone-hostory": "*"
+    "spini/backbone-history": "*"
   },
   "development": {},
   "scripts": [
