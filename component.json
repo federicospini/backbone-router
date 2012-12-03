@@ -6,7 +6,8 @@
   "keywords": [],
   "dependencies": {
     "component/underscore": "*",
-    "timoxley/backbone-events": "*"
+    "timoxley/backbone-events": "*",
+    "spini/backbone-hostory": "*"
   },
   "development": {},
   "scripts": [

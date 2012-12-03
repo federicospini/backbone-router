@@ -2,7 +2,8 @@
 // -------------------
 
 var _ = require('underscore');
-var Events = require('backbone-events');
+var Events = require('timoxley/backbone-events');
+var History = require('spini-backbone-history');
 
 // Routers map faux-URLs to actions, and fire events when routes are
 // matched. Creating a new one sets its `routes` hash, if not set statically.
@@ -33,6 +34,7 @@ _.extend(Router.prototype, Events, {
   //     });
   //
   route: function(route, name, callback) {
+    Backbone = Backbone || {};
     Backbone.history || (Backbone.history = new History);
     if (!_.isRegExp(route)) route = this._routeToRegExp(route);
     if (!callback) callback = this[name];
