@@ -2,7 +2,7 @@
 // -------------------
 
 var _ = require('underscore');
-var Events = require('timoxley/backbone-events');
+var Events = require('timoxley-backbone-events');
 var History = require('spini-backbone-history');
 
 // Routers map faux-URLs to actions, and fire events when routes are
