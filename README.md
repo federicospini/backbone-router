@@ -6,6 +6,10 @@
 
     $ component install spini/backbone-router
 
+## History stuff
+
+It provides `Router.history` instead of `Backbone.history`
+
 ## Example
 
 ```js
@@ -31,6 +35,28 @@ var Workspace = Router.extend({
 });
 
 ```
+
+# instantiate your Router
+
+```
+
+var myrouter = new Router(options);
+
+```
+
+
+# and then start history
+
+```
+
+Router.history.start({pushState: true});
+
+// or
+
+Router.history.start();
+
+```
+
 
 ## API
 

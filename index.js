@@ -20,7 +20,7 @@ var namedParam    = /:\w+/g;
 var splatParam    = /\*\w+/g;
 var escapeRegExp  = /[-[\]{}()+?.,\\^$|#\s]/g;
 
-// Set up all inheritable **Backbone.Router** properties and methods.
+// Set up all inheritable **Router** properties and methods.
 _.extend(Router.prototype, Events, {
 
   // Initialize is an empty function by default. Override it with your own
@@ -34,25 +34,24 @@ _.extend(Router.prototype, Events, {
   //     });
   //
   route: function(route, name, callback) {
-    Backbone = Backbone || {};
-    Backbone.history || (Backbone.history = new History);
+    Router.history || (Router.history = new History);
     if (!_.isRegExp(route)) route = this._routeToRegExp(route);
     if (!callback) callback = this[name];
-    Backbone.history.route(route, _.bind(function(fragment) {
+    Router.history.route(route, _.bind(function(fragment) {
       var args = this._extractParameters(route, fragment);
       callback && callback.apply(this, args);
       this.trigger.apply(this, ['route:' + name].concat(args));
-      Backbone.history.trigger('route', this, name, args);
+      Router.history.trigger('route', this, name, args);
     }, this));
     return this;
   },
 
-  // Simple proxy to `Backbone.history` to save a fragment into the history.
+  // Simple proxy to `Router.history` to save a fragment into the history.
   navigate: function(fragment, options) {
-    Backbone.history.navigate(fragment, options);
+    Router.history.navigate(fragment, options);
   },
 
-  // Bind all defined routes to `Backbone.history`. We have to reverse the
+  // Bind all defined routes to `Router.history`. We have to reverse the
   // order of the routes here to support behavior where the most general
   // routes can be defined at the bottom of the route map.
   _bindRoutes: function() {
