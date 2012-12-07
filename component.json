@@ -3,7 +3,11 @@
   "repo": "spini/backbone-router",
   "description": "Backbone Router component",
   "version": "0.0.1",
-  "keywords": [],
+  "keywords": [
+    "backbone",
+    "router",
+    "mvc"
+  ],
   "dependencies": {
     "component/underscore": "*",
     "timoxley/backbone-events": "*",
