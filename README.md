@@ -1,6 +1,6 @@
 # backbone-router
 
-  Backbone Router [Component](https://github.com/component/component/wiki/Components)
+  Backbone.Router [component](https://github.com/component/component/wiki/Components)
 
 ## Installation
 
